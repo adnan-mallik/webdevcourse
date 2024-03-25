@@ -4,19 +4,135 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+
+        /* div.abc p {
+            color: red;
+            font-family: sans-serif;
+            font-weight: bold;
+        } */
+
+        /* #paragraph_1{
+            color: red;
+            font-family: sans-serif;
+            font-weight: bold;
+        }
+        #paragraph_2{
+            color: blue;
+            font-family: sans-serif;
+            font-weight: bold;
+        }
+
+        #heading{
+            color: aqua;
+        } */
+
+        /* p [name="paragraph_1"] {
+            color: red;
+            font-family: sans-serif;
+            font-weight: bold;
+        } */
+
+        /* div > p{
+            color: red;
+        } */
+
+        div + p{
+            color: red;
+        }
+    </style>
 </head>
 <body>
     
-    <h2>Home Page</h2>
+    <!-- <h2>Home Page</h2>
     <ul>
         <li><a href="/admin/login/login.html">Admin Login</a></li>
         <li><a href="/admin/signup/signup.html">Admin Signup</a></li>
         <li><a href="/client/login/login.html">Client Login</a></li>
         <li><a href="/client/signup/signup.html">Client Signup</a></li>
         <li><a href="/index.html">Home Page</a></li>
-    </ul>
+    </ul> -->
 
     <!-- <img src="https://static.thenounproject.com/png/3859979-200.png " alt=""> -->
-    <img src="assets/images/1.png" alt="">
+    <!-- <img src="assets/images/1.png" alt=""> -->
+
+    <!-- CTRL + / -->
+
+    <!-- <p class="paragraph_1" id="paragraph_1" name="paragraph_1">This is paragraph</p>
+    <p class="paragraph_2" id="paragraph_2" name="paragraph_2">This is paragraph</p>
+
+
+    <h1 id="heading">This is heading</h1>
+    <h1 id="heading">This is heading</h1>
+    <h1 id="heading">This is heading</h1>
+    <h1 id="heading">This is heading</h1>
+    <h1 id="heading">This is heading</h1>
+    <h1 id="heading">This is heading</h1> -->
+
+    <!-- decendant selectors -->
+
+    <!-- <div class="abc">
+        <p>This is paragraph</p>
+        <p>This is paragraph</p>
+        <p>This is paragraph</p>
+        <p>This is paragraph</p>
+    </div>
+    <span class="abc">
+        <p>This is paragraph</p>
+        <p>This is paragraph</p>
+        <p>This is paragraph</p>
+        <p>This is paragraph</p>
+    </span>
+    <div>
+        <p>This is paragraph</p>
+        <p>This is paragraph</p>
+        <p>This is paragraph</p>
+        <p>This is paragraph</p>
+    </div> -->
+
+    <!-- child selectors -->
+
+    <!-- <h2>Child Selector</h2>
+
+    <p>The child selector (>) selects all elements that are the children of a specified element.</p>
+
+    <div>
+        <p>Paragraph 1 in the div.</p>
+        <p>Paragraph 2 in the div.</p>
+        <section>
+            not Child but Descendant
+            <p>Paragraph 3 in the div (inside a section element).</p>
+        </section>
+            graph 4 in the div.</p>
+    </div>
+
+    <p>Paragraph 5. Not in a div.</p>
+    <p>Paragraph 6. Not in a div.</p> -->
+
+
+    <!-- Adjacent Sibling Selector -->
+    <h2>Adjacent Sibling Selector</h2>
+
+    <p>The + selector is used to select an element that is directly after another specific element.</p>
+    <p>The following example selects the first p element that are placed immediately after div elements:</p>
+
+    <div>
+        <p>Paragraph 1 in the div.</p>
+        <p>Paragraph 2 in the div.</p>
+    </div>
+
+    <p>Paragraph 3. After a div.</p>
+    <p>Paragraph 4. After a div.</p>
+
+    <div>
+        <p>Paragraph 5 in the div.</p>
+        <p>Paragraph 6 in the div.</p>
+    </div>
+
+    <p>Paragraph 7. After a div.</p>
+    <p>Paragraph 8. After a div.</p>
+
+
+
 </body>
 </html>

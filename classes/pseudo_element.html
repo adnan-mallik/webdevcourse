@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="">
+
+    <!-- <style>
+
+        /* #test {
+          background: red;  
+        } */
+        /* #test1{
+            background: blue;
+        } */
+        body{
+            /* background-color: pink; */
+            /* background-image: url('data:image/jpeg;base64,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jBEfErVOQsB4WBLff6TX4fjRUrs40HwUNuhzPf6i3pPuE1RV51HYnyHzehAt6iV33v8AdZI8OpkKWb5nOYjpoAB6ACbkT7NpNQIiJIREQEREBERAREQEREBERAREQEREBIvjCZQtZRdqZufFDo49tfSSc8VEBBBFwQQR1B3kWbgaMOoI9wZRkwNV8DTyKzFS6uoPe7rul1B52uNDex0Es/BGZQ9FzdqbWB6odVP39pj7P6HEJyWu+XwVgrfcmUveto8qLwXFPSp1XdxZwuXf5Rdvcs9yPAy2dmsUar3UXp06armPNzZnsPHQ+Fh1kH26w6U3udEazkDS7arYHkCxufOTHZriNNKSUaSs76Fso0F7Zmdthrfa+1t9Jlh1lqi2RETpSREQEREBERAREQEREBERAREQEREBERAREQIXiN6eJpVR8j/un8yb0z/muL/qE+8KFsRiR+pD7pebHGsKauHqIvzFSU8HHeQ+jgH0kNwbi6MKlfnUFLKv4mbKVygczmBGnSZ3qo+XnimB/asS9MMVVEVXYcr3Yjpchre55WlhwOCSigSmthz6k9SeZmPhuE+GpuO+7Fm/iP8Af3m9Jxx13fNS+xES4REQEREBERAREQEREBERAREQEREBERAREQPkguFdn6dFy5ALAsKepIRL6b/i11PjbqTOz7Is2EREkIiICIiAiIgIiICIiB//2Q=='); */
+
+            background-repeat: no-repeat;
+            /* background-size: 100%; */
+            background-position: right top;
+            background-attachment: fixed;
+        }
+        p::first-letter{
+            font-size:28px;
+            color: red;
+        }
+        p::first-line{
+            font-size:28px;
+            color: red;
+        }
+
+        html,body{
+            border: 4px solid black;
+            margin: 0;
+        }
+        #test{
+            border: 4px solid green;
+            margin-left: 15px;
+            padding-left: 15px;
+            /* margin-right: 15px;
+            margin-top: 15px; */
+            /* margin-bottom: 39px; */
+
+            /* margin: 15px 5px 30px 50px; */
+
+            /* border-radius: 10px; */
+            /* border-width: 3px;
+            border-style:solid;
+            border-color: red; */
+
+            /* border-bottom: 2px solid green; */
+            /* border-right: 4px solid green; */
+            /* border-top: 4px solid green; */
+            /* height: 100vh; */
+            /* border-left: 4px solid green; */
+
+        }
+
+        #test1{
+            border: 4px solid green;
+            /* margin-top:40px; */
+            margin-top:40px;
+        }
+
+    /* p{
+        background: yellow;
+    } */
+    /* [class="test"],[name="test"]{
+        background: yellow;
+    } */
+    </style> -->
+
+    <style>
+        ul {
+            /* list-style-type: circle; */
+            /* list-style-type: upper-roman    ; */
+            /* list-style-type: lower-alpha    ; */
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        ul > li{
+            display: inline;
+            /* background-color: red; */
+        }
+    </style>
+</head>
+<body>
+
+    <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">Courses</a></li>
+        <li><a href="">Classes</a></li>
+        <li><a href="">Examination</a></li>
+        <li><a href="">Help</a></li>
+        <li><a href="">Contact</a></li>
+    </ul>
+
+    <!-- <span><i class="fas fa-cloud" style="font-size: 40px;color:red;"></i></span>
+    <i class="fab fa-facebook"></i>
+    <i class="fas fa-heart"></i>
+    <i class="fas fa-car"></i>
+    <i class="fas fa-file"></i>
+    <i class="fas fa-bars"></i>
+
+    <p id="test" name="test">
+        You can use the ::first-line pseudo-element to add a special effect to the first line of a text. Some more text. And even more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more.
+    </p>
+    <p id="test1" name="test">
+        You can use the ::first-line pseudo-element to add a special effect to the first line of a text. Some more text. And even more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more.
+    </p> -->
+
+    <!-- <p id="test" class="test">
+        You can use the ::first-line pseudo-element to add a special effect to the first line of a text. Some more text. And even more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more.
+    </p>
+    <p id="test" name="test">
+        You can use the ::first-line pseudo-element to add a special effect to the first line of a text. Some more text. And even more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more.
+    </p>
+
+    <p id="test" class="test">
+        You can use the ::first-line pseudo-element to add a special effect to the first line of a text. Some more text. And even more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more.
+    </p>
+    <p id="test" name="test">
+        You can use the ::first-line pseudo-element to add a special effect to the first line of a text. Some more text. And even more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more.
+    </p>
+
+    <p id="test" class="test">
+        You can use the ::first-line pseudo-element to add a special effect to the first line of a text. Some more text. And even more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more.
+    </p>
+    <p id="test" name="test">
+        You can use the ::first-line pseudo-element to add a special effect to the first line of a text. Some more text. And even more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more.
+    </p>
+
+    <p id="test" class="test">
+        You can use the ::first-line pseudo-element to add a special effect to the first line of a text. Some more text. And even more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more.
+    </p>
+    <p id="test" name="test">
+        You can use the ::first-line pseudo-element to add a special effect to the first line of a text. Some more text. And even more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more.
+    </p>
+
+    <p id="test" class="test">
+        You can use the ::first-line pseudo-element to add a special effect to the first line of a text. Some more text. And even more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more.
+    </p>
+    <p id="test" name="test">
+        You can use the ::first-line pseudo-element to add a special effect to the first line of a text. Some more text. And even more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more.
+    </p>
+
+    <p id="test" class="test">
+        You can use the ::first-line pseudo-element to add a special effect to the first line of a text. Some more text. And even more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more.
+    </p>
+    <p id="test" name="test">
+        You can use the ::first-line pseudo-element to add a special effect to the first line of a text. Some more text. And even more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more.
+    </p>
+
+    <p id="test" class="test">
+        You can use the ::first-line pseudo-element to add a special effect to the first line of a text. Some more text. And even more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more.
+    </p>
+    <p id="test" name="test">
+        You can use the ::first-line pseudo-element to add a special effect to the first line of a text. Some more text. And even more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more.
+    </p>
+
+    <p id="test" class="test">
+        You can use the ::first-line pseudo-element to add a special effect to the first line of a text. Some more text. And even more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more.
+    </p>
+    <p id="test" name="test">
+        You can use the ::first-line pseudo-element to add a special effect to the first line of a text. Some more text. And even more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more.
+    </p>
+
+    <p id="test" class="test">
+        You can use the ::first-line pseudo-element to add a special effect to the first line of a text. Some more text. And even more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more.
+    </p> -->
+    
+    <script>
+        // let element = document.getElementById('test');
+        let element = document.getElementsByClassName('test');
+        console.log(element);
+
+        // element.style.background = "red";
+    </script>
+</body>
+</html>

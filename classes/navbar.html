@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <style>
+        html,body{
+            margin: 0;
+            padding: 0;
+        }
+        .nav-container{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            background: #333;
+            color: white;
+        }
+        .nav-menu > ul {
+            display: flex;
+
+        }
+        .nav-menu > ul > li {
+            list-style-type: none;
+            /* margin-left:10px ; */
+            padding-left: 40px;
+        }
+        .nav-menu > ul > li > a{
+            text-decoration: none;
+            color: white;
+        }
+        .nav-menu > ul > li > a:hover{
+            color: green;
+        }
+        .search-bar{
+            flex-grow: 1;
+            margin-left: 50px;
+            display: flex;
+        }
+        .nav-search-bar{
+            background-color: white;
+            border-radius: 10px;
+            padding: 0px 10px;
+        }
+        .nav-search-bar > input,button{
+            outline: none;
+            border: none;
+            /* height: 40px; */
+            background-color: none;
+            background-color: transparent;
+        }
+        .nav-search-bar > button{
+            width: 60px;
+            height: 40px;
+        }
+        .nav-search-bar > button > i{
+            font-size: 24px;
+        }
+        .nav-search-bar > button:hover{
+            background-color: grey;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="nav-container">
+        <div class="nav-icon">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/W3Schools_logo.svg/2175px-W3Schools_logo.svg.png" alt="logo" height="40px" width="40px">
+        </div>
+        <div class="nav-menu">
+            <ul>
+                <li><a href="#">Tutorial</a></li>
+                <li><a href="#">Excercises</a></li>
+                <li><a href="#">Certificate</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </div>
+        <div class="search-bar">
+            <!-- <div class="nav-search">
+                <input type="text" placeholder="Search...">
+            </div>
+            <div class="nav-search-icon">
+                <i class='bx bx-search' ></i>
+            </div> -->
+
+            <span class="nav-search-bar">
+                <input type="text" placeholder="Search...">
+                <button><i class='bx bx-search'></i></button>
+            </span>
+        </div>
+    </div>
+
+</body>
+</html>

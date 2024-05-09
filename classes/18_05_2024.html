@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <!-- <button onclick="eventDetector()">Click</button> -->
+    <button id="btn">Click</button>
+
+    <script>
+        // let users = [
+        //     {id: 1, name: "John"},
+        //     {id: 2, name: "Pete"},
+        //     {id: 3, name: "Mary"}
+        // ];
+
+        // let user = {
+        //     id: 1, 
+        //     name: "John",
+        //     age: 30
+        // };
+
+        // console.log( user[name] );
+        // for (const key in user) {
+        //     console.log( key, " => ", user[key]);
+        // }
+
+        // for(let value of users) {
+        //     console.log(value);
+        //     // console.log( users.indexOf(value) );
+        //     for(let key in value) {
+        //         console.log( key, " => ", value[key]);
+        //     }
+        // }
+
+
+        // forin loop | forof loop
+
+        // function eventDetector(){
+        //     // console.log("hello world");
+        //     alert("hello world");
+        // }
+
+        // eventDetector();
+        let btn = document.getElementById('btn');
+
+        // btn.addEventListener('click', eventDetector);
+        btn.addEventListener('click', function(){
+            alert("hello world");
+        });
+
+    </script>
+</body>
+</html>

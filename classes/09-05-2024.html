@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            display: flex;
+        }
+        .form_data{
+            padding: 10px;
+        }
+        .preview{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="form_data">
+            <div>
+                <input type="text" name="first_name" id="first_name">
+            </div>
+            <div>
+                <input type="text" name="last_name" id="last_name">
+            </div>
+            <div>
+                <input type="text" name="country" id="country">
+            </div>
+            <div>
+                <select name="" id="city">
+                    <option value="" selected disabled>country</option>
+                    <option value="sargodha">Sargodha</option>
+                    <option value="gujranwala">Gujranwala</option>
+                    <option value="sialkot">Sialkot</option>
+                    <option value="lahore">Lahore</option>
+                </select>
+            </div>
+            <div>
+                <button type="button" id="btn">Click</button>
+            </div>
+        </div>
+        <div class="preview">
+            <div>
+                <span>
+                    First Name: <span id="first_name_preview"></span>
+                </span>
+            </div>
+            <div>
+                <span>
+                    Last Name: <span id="last_name_preview"></span>
+                </span>
+            </div>
+            <div>
+                <span>
+                    Country: <span id="country_preview"></span>
+                </span>
+            </div>
+            <div>
+                <span>
+                    City: <span id="city_preview"></span>
+                </span>
+            </div>
+        </div>
+    </div>
+   
+
+
+    <script>
+
+        // let city = document.getElementById("city");
+
+        // city.addEventListener("change", function(){
+
+        //     console.log(city.value);
+        // })
+
+
+        let first_name_field = document.getElementById('first_name');
+
+        first_name_field.addEventListener('keyup', function(){
+
+            console.log(this);
+            console.log(this.value);
+
+            document.getElementById('first_name_preview').innerText = this.value;
+        });
+
+    </script>
+
+</body>
+</html>

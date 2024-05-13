@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQs with Input Field</title>
+  <!-- <link rel="stylesheet" href="styles.css"> -->
+
+  <style>
+    .faq-container {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .faq-item {
+        margin-bottom: 20px;
+    }
+
+    .faq-item label {
+        cursor: pointer;
+        display: block;
+        font-weight: bold;
+    }
+
+    .answer {
+        display: none;
+        margin-top: 10px;
+    }
+
+    input[type="checkbox"]:checked ~ .answer {
+        display: block;
+    }
+
+    .faq-input {
+        margin-top: 30px;
+    }
+
+    .faq-input input[type="text"] {
+        width: 70%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px 0 0 5px;
+    }
+
+    .faq-input button {
+        padding: 10px 20px;
+        border: none;
+        background-color: #007bff;
+        color: #fff;
+        border-radius: 0 5px 5px 0;
+        cursor: pointer;
+    }
+
+    .faq-input button:hover {
+        background-color: #0056b3;
+    }
+
+    .faq{
+        display: inline-block !important;
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="faq-container">
+  <h2>Frequently Asked Questions</h2>
+
+  <div id="faqs"></div>
+  <!-- <div class="faq-item">
+    <input type="checkbox" id="faq1">
+    <label for="faq1">What is Lorem Ipsum?</label>
+    <div class="answer">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut ultrices quam.</p>
+    </div>
+  </div> -->
+
+  <!-- <div class="faq-item">
+    <input type="checkbox" id="faq2">
+    <label for="faq2">Why do we use it?</label>
+    <div class="answer">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut ultrices quam.</p>
+    </div>
+  </div> -->
+
+  <!-- Add more FAQ items as needed -->
+
+  <div class="faq-input">
+    <input type="text" placeholder="Have another question? Ask here..." id="faq">
+    <button id="post_faq">Submit</button>
+  </div>
+</div>
+
+
+    <script>
+
+        let local_data = JSON.parse(localStorage.getItem('faqs'));
+
+        let faq_id   = 1;
+        let faq      = '';
+        let faq_html = '';
+
+        if(local_data){
+            for(let val of local_data){
+                console.log(val);
+                faq_html = `<div class="faq-item">
+                    <input type="checkbox" id="faq${val.id}" class="faq">
+                    <label for="faq${val.id}" class="faq">${val.question}</label>
+                    <div class="answer">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut ultrices quam.</p>
+                    </div>
+                </div>`;
+
+                document.getElementById('faqs').innerHTML += faq_html;
+                faq_id += val.id + 1;
+            }
+        }
+
+
+        document.getElementById('post_faq').addEventListener('click', function(){
+            
+            faq = document.getElementById('faq').value;
+
+            faq_html = `<div class="faq-item">
+                <input type="checkbox" id="faq${faq_id}" class="faq">
+                <label for="faq${faq_id}" class="faq">${faq}?</label>
+                <div class="answer">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut ultrices quam.</p>
+                </div>
+            </div>`;
+
+            document.getElementById('faqs').innerHTML += faq_html;
+            faq_id += 1;   
+            
+            document.getElementById('faq').value = "";
+        });
+
+        // let faq_data = [
+        //     { id: 1, question:"What is the purpose of upwork?"}
+        // ]
+        // localStorage.setItem('faqs', JSON.stringify(faq_data));
+
+        console.log(   );
+
+    </script>
+
+</body>
+</html>

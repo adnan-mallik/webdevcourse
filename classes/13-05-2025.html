@@ -135,14 +135,24 @@
             document.getElementById('faq').value = "";
         });
 
-        // let faq_data = [
-        //     { id: 1, question:"What is the purpose of upwork?"}
-        // ]
+        let faq_data = [
+            { id: 1, question:"What is the purpose of upwork?"}
+        ]
+
+        // faq_data = JSON.stringify(faq_data)
+
+        // faq_data = JSON.parse( faq_data )
+        // console.log( typeof faq_data );
         // localStorage.setItem('faqs', JSON.stringify(faq_data));
 
-        console.log(   );
+
+        faq_data = JSON.parse( localStorage.getItem('faqs') )
+
+        // faq_data = JSON.parse(faq_data)
+        console.log(faq_data);
 
     </script>
 
 </body>
 </html>
+=
